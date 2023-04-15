@@ -1,41 +1,70 @@
+body {
+    background-color: gainsboro;
+}
 .main-container {
-    background-color: bisque;
-    height: 650px;
-    width: 840px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 200px auto;
-    border-radius: 18px 18px 130px 18px;
+  background-color: rgb(255, 255, 255);
+  height: 650px;
+  width: 840px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 200px auto;
+  border-radius: 18px 18px 130px 18px;
 }
 .content-container {
-    background-color: azure;
-    height: 600px;
-    width: 800px;
+ 
+  height: 530px;
+  width: 760px;
 }
-.inputs-container{
-    display: flex;
-    gap:30px
-    
+.inputs-container {
+  display: flex;
+  gap: 30px;
 }
 .input-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-.input-class-day , .input-class-month, .input-class-year {
-    margin-top:5px;
-    width: 156px;
-    height: 80px;
-    border-radius: 4px;
-    border: 0.5px solid black;
-    padding-left:10px;
+.input-class-day,
+.input-class-month,
+.input-class-year {
+  margin-top: 5px;
+  width: 159px;
+  height: 71px;
+  border-radius: 4px;
+  border: 0.5px solid black;
+  padding:10px 0 0 20px;
+  font-size: 23px;
+  font-weight: 700;
 }
 input::-webkit-input-placeholder {
-    color: red;
-    font-weight: 700;
-
+  
+  font-weight: 700;
+  font-size: 30px;
+  
 }
 label {
-    font-weight: 700;
-    font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+.reqEroorp {
+    color: red;
+}
+.part2 {
+    display: flex;
+    
+    align-items: center;
+}
+
+hr {
+    width: 100%;
+}
+.imgbutton{
+    border-radius: 50%!important;
+}
+.amigos {
+    border-radius: 50%!important;
+    border: 0;
+    width: 100px;
+    height: 80px;
+    background-color: blueviolet;
 }

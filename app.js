@@ -1,11 +1,26 @@
 let button = document.querySelector(".amigos");
+let reqerror = document.querySelectorAll(".reqEroorp");
+function validateNumberInput(inputElement) {
+  const hasNonNumeric = /\D/.test(inputElement.value);
+  if (hasNonNumeric) {
+    inputElement.classList.add("reqEroorp");
+    reqerror.forEach(function (element) {
+      element.innerHTML = "This field is required"
 
+    });
+  } else {
+    inputElement.classList.remove("reqEroorp");
+  }
+} 
 button.addEventListener("click", function (event) {
   event.preventDefault();
   let yearInput = document.querySelector(".input-class-year");
   let monthInput = document.querySelector(".input-class-month");
   let dayInput = document.querySelector(".input-class-day");
-
+  validateNumberInput(yearInput);
+  validateNumberInput(monthInput);
+  validateNumberInput(dayInput);
+  
   let currentDarte = new Date();
 
   let yearsRuselt = document.querySelector(".years-ruselt");
