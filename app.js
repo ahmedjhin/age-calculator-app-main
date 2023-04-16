@@ -1,15 +1,16 @@
 let button = document.querySelector(".amigos");
-let reqerror = document.querySelectorAll(".reqEroorp");
-function validateNumberInput(inputElement) {
+let dayerr = document.querySelector(".reqEroorp1");
+let montherr = document.querySelector(".reqEroorp2");
+let yearerr = document.querySelector(".reqEroorp3");
+
+function validateNumberInput(inputElement , errmasege) {
   const hasNonNumeric = /\D/.test(inputElement.value);
   if (hasNonNumeric) {
     inputElement.classList.add("reqEroorp");
-    reqerror.forEach(function (element) {
-      element.innerHTML = "This field is required"
-
-    });
+    errmasege.innerHTML =  "Lover gays give your kids";
   } else {
     inputElement.classList.remove("reqEroorp");
+    errmasege.innerHTML =  "";
   }
 } 
 button.addEventListener("click", function (event) {
@@ -17,9 +18,9 @@ button.addEventListener("click", function (event) {
   let yearInput = document.querySelector(".input-class-year");
   let monthInput = document.querySelector(".input-class-month");
   let dayInput = document.querySelector(".input-class-day");
-  validateNumberInput(yearInput);
-  validateNumberInput(monthInput);
-  validateNumberInput(dayInput);
+  validateNumberInput(yearInput ,yearerr );
+  validateNumberInput(monthInput, montherr);
+  validateNumberInput(dayInput , dayerr);
   
   let currentDarte = new Date();
 
