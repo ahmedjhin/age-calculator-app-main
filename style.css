@@ -9,12 +9,12 @@ body {
   justify-content: center;
   align-items: center;
   margin: 200px auto;
-  border-radius: 18px 18px 130px 18px;
+  border-radius: 30px 30px 130px 30px;
 }
 .content-container {
  
   height: 530px;
-  width: 760px;
+  width: 720px;
 }
 .inputs-container {
   display: flex;
@@ -28,16 +28,17 @@ body {
 .input-class-month,
 .input-class-year {
   margin-top: 5px;
-  width: 159px;
+  width: 143px;
   height: 71px;
-  border-radius: 4px;
-  border: 0.5px solid black;
-  padding:10px 0 0 20px;
-  font-size: 23px;
-  font-weight: 700;
+  border-radius: 8px;
+  border: 0.1px solid rgb(197, 191, 191);
+  padding:0 0 0 15px;
+  font-size: 24px;
+  font-weight: 900;
+  
 }
 input::-webkit-input-placeholder {
-  
+  padding: 10px;
   font-weight: 700;
   font-size: 30px;
   
@@ -46,6 +47,10 @@ label {
   font-weight: 700;
   font-family: "Poppins", sans-serif;
 }
+.reqEroor {
+  border: solid 1px red;
+}
+
 .reqEroorp1 , .reqEroorp2 , .reqEroorp3 {
     color: red;
 }
@@ -66,5 +71,16 @@ hr {
     border: 0;
     width: 100px;
     height: 80px;
-    background-color: blueviolet;
+    background-color: hsl(259, 100%, 65%);
+}
+.span-res{
+  color: hsl(259, 100%, 65%);
+}
+.years-ruselt, .months-ruselt, .days-ruselt {
+  margin: 0;
+  line-height: 85%;
+  font-size:120px;
+  font-stretch: expanded;
+  font-weight: bolder;
+  font-family: "Poppins", sans-serif;
 }

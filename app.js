@@ -3,14 +3,26 @@ let dayerr = document.querySelector(".reqEroorp1");
 let montherr = document.querySelector(".reqEroorp2");
 let yearerr = document.querySelector(".reqEroorp3");
 
-function validateNumberInput(inputElement , errmasege) {
+let dayslabel = document.querySelector(".label-class1");
+let monthslabel = document.querySelector(".label-class2");
+let yearslabel = document.querySelector(".label-class3");
+
+function validateNumberInput(inputElement , errmasege,label) {
   const hasNonNumeric = /\D/.test(inputElement.value);
-  if (hasNonNumeric) {
-    inputElement.classList.add("reqEroorp");
-    errmasege.innerHTML =  "Lover gays give your kids";
+  if (hasNonNumeric ) {
+    inputElement.classList.add("reqEroor");
+    errmasege.innerHTML =  "this is not a number";
+    label.classList.add("reqEroorp2");
   } else {
     inputElement.classList.remove("reqEroorp");
-    errmasege.innerHTML =  "";
+    errmasege.innerHTML =  ""; 
+    label.classList.remove("reqEroorp2");
+    inputElement.classList.remove("reqEroor");
+  }
+  if (inputElement.value === "") {
+    errmasege.innerHTML = "this field is required";
+    label.classList.add("reqEroorp2");
+    inputElement.classList.add("reqEroor");
   }
 } 
 button.addEventListener("click", function (event) {
@@ -18,9 +30,9 @@ button.addEventListener("click", function (event) {
   let yearInput = document.querySelector(".input-class-year");
   let monthInput = document.querySelector(".input-class-month");
   let dayInput = document.querySelector(".input-class-day");
-  validateNumberInput(yearInput ,yearerr );
-  validateNumberInput(monthInput, montherr);
-  validateNumberInput(dayInput , dayerr);
+  validateNumberInput(yearInput ,yearerr , yearslabel );
+  validateNumberInput(monthInput, montherr , monthslabel );
+  validateNumberInput(dayInput , dayerr , dayslabel);
   
   let currentDarte = new Date();
 
